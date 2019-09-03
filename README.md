@@ -13,6 +13,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
  2. npm start -> run the app on your loacalhost (please make sure port 3000 is available).
 
 
- #Author :
+ # Author :
  Nurit Levi
 
