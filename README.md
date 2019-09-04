@@ -1,18 +1,15 @@
-# Title :
+# Duda Home Test
 
-Duda home test
-
-# Description :
-
+description....
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# How to run the project, First time setup :
+# Development setup
 
- 1. npm install -> to install dependencies
- 2. npm start -> run the app on your loacalhost (please make sure port 3000 is available).
+ 1. `npm install` -> to install dependencies
+ 2. `npm start` -> run the app on your loacalhost (please make sure port 3000 is available).
 
-# Heroku deployment :
+# Heroku deployment
 1. npm run build
 2. git add .
 3. git commit -m "your commit name"
@@ -20,6 +17,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 5. URL : https://polar-oasis-59325.herokuapp.com
 
- # Author :
- Nurit Levi
+ # Author
+ Nurit Levi 
 
