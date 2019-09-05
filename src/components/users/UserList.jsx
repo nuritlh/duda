@@ -39,7 +39,6 @@ class UserList extends React.Component {
         this.setState({users, sortBy})
     }
        
-
     render() {
         if (this.state.users.length === 0) return  <Spinner />
         if (this.state.users )  {

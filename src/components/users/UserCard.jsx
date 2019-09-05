@@ -14,8 +14,6 @@ class UserCard extends React.Component {
 
     render () {
         return (
-
-
             <tr>
                 <td>
                     <h4 className="ui image header">
@@ -43,11 +41,7 @@ class UserCard extends React.Component {
                     </div>
                 </td>
           </tr>
-
-
-
         )}
-    
 }
 
 export default UserCard
