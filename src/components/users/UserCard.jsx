@@ -5,7 +5,7 @@ import './users.css';
 class UserCard extends React.Component {
 
     state = {active: (this.props.user.active)? 'Active' : 'Non Active',
-            userImg: './images/user' + this.props.user.id + '.png'
+            userImg: this.props.user.id + 1
     }
 
     deleteUser = () => {
@@ -16,7 +16,7 @@ class UserCard extends React.Component {
         return (
             <div className="user-container">
                 <div>
-                    <img src={this.state.userImg} alt="user poster"/>
+                    <img src={this.props.user.src} alt="user poster"/>
                 </div>
                 <div>
                     {this.props.user.name}

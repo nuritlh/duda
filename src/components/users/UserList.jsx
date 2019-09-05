@@ -21,12 +21,13 @@ class UserList extends React.Component {
 
     deleteUser = (userId) => {
         var users = this.state.users
-        let userIdx = users.indexOf(userId);
-        users.splice(userIdx, 1);
+        var useridx;
+        users.forEach((user,idx) => {
+            if (user.id === userId) useridx = idx;
+        })
+        users.splice(useridx, 1);
         this.setState({users})
     }
-
-
     
     sortUserList = (sortBy) => {
         var users = this.state.users;
