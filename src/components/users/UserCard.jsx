@@ -2,11 +2,10 @@ import React from 'react';
 
 import './users.css';
 
-
 class UserCard extends React.Component {
 
     state = {active: (this.props.user.active)? 'Active' : 'Non Active',
-            userImg: '../../../public/images/user' + this.props.user.id + '.png'
+            userImg: './images/user' + this.props.user.id + '.png'
     }
 
     deleteUser = () => {
