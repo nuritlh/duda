@@ -37,5 +37,5 @@ function compareByCity( a, b ) {
 }
 
 function compareByStatus( a, b ) {
-     return a.active-b.active
+     return a.active - b.active
 }

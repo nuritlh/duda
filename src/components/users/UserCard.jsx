@@ -14,25 +14,40 @@ class UserCard extends React.Component {
 
     render () {
         return (
-            <div className="user-container">
-                <div>
-                    <img src={this.props.user.src} alt="user poster"/>
-                </div>
-                <div>
-                    {this.props.user.name}
-                </div>
-                <div>
-                    {this.props.user.city}
-                </div>
-                <div>
-                    {this.state.active}
-                </div>
-                <div>
-                    <button className="ui button" onClick={this.deleteUser}>delete</button>
-                </div>
-            </div>
-        )
-    }
+
+
+            <tr>
+                <td>
+                    <h4 className="ui image header">
+                        <img src={this.props.user.src} alt="user poster" className="ui mini rounded image" />
+                    </h4>
+                </td>
+                <td>
+                    <div className="content name">
+                        {this.props.user.name}
+                    </div>
+                </td>
+                <td>
+                    <div className="content">
+                        {this.props.user.city}
+                    </div>
+                </td>
+                <td>
+                    <div className="content">
+                        {this.state.active}
+                    </div>
+                </td>
+                <td>
+                    <div className="content">
+                        <button className="ui primary button" onClick={this.deleteUser}>delete</button>
+                    </div>
+                </td>
+          </tr>
+
+
+
+        )}
+    
 }
 
 export default UserCard

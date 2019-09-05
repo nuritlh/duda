@@ -1,5 +1,31 @@
-.user-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
+.ui[class*="very basic"].table {
+    width: 100%;
+}
+
+.ui.header>.image:not(.icon), .ui.header>img {
+    width: 10.5em !important;
+}
+
+.ui.basic.table th {
+    color:#bfb9b9;
+}
+
+.ui.basic.table td {
+    vertical-align: middle;
+}
+
+.ui.basic.table tbody tr:hover {
+    background-color: #f8f9fb !important;
+}
+
+button:hover {
+    opacity: 0.8 !important;
+}
+
+.sort {
+    color: #5e77ff !important;
+}
+
+.name {
+    font-weight: 600;
 }

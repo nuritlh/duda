@@ -9,7 +9,9 @@ import './users.css';
 
 class UserList extends React.Component {
 
-    state = { users: [] };
+    state = { users: [],
+                sortBy: 'name'
+            };
     
     componentDidMount() {
         this.getUsersData();
@@ -34,8 +36,7 @@ class UserList extends React.Component {
         if(sortBy === 'name') users.sort( Services.compareByName );
         if(sortBy === 'city') users.sort( Services.compareByCity );
         if(sortBy === 'status') users.sort( Services.compareByStatus );
-        this.setState({users})
-         
+        this.setState({users, sortBy})
     }
        
 
@@ -44,16 +45,22 @@ class UserList extends React.Component {
         if (this.state.users )  {
           return (
             <div >
-                <div className="user-container">
-                    <div >USER</div>
-                    <div onClick={() => this.sortUserList('name')}>NAME</div>
-                    <div onClick={() => this.sortUserList('city')}>CITY</div>
-                    <div onClick={() => this.sortUserList('status')}>STATUS</div>
-                    <div></div>
-                </div>
+                <h1>Online Users</h1>
+                <table className="ui very basic collapsing celled table">
+                    <thead>
+                        <tr>
+                            <th >USER</th>
+                            <th className={(this.state.sortBy === 'name' ? 'sort' : '')} onClick={() => this.sortUserList('name')}>NAME</th>
+                            <th className={(this.state.sortBy === 'city' ? 'sort' : '')} onClick={() => this.sortUserList('city')} >CITY</th>
+                            <th className={(this.state.sortBy === 'status' ? 'sort' : '')} onClick={() => this.sortUserList('status')}>STATUS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
                 {this.state.users.map((user, idx) => {
                     return <UserCard key={idx} user={user} deleteUser={this.deleteUser}/>
                 })}
+                    </tbody>
+                </table>
             </div> 
           );
         }
