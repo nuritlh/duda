@@ -39,7 +39,7 @@ class UserCard extends React.Component {
                 </td>
                 <td>
                     <div className="content">
-                        <button className="ui primary button" onClick={this.deleteUser}>delete</button>
+                        <button className="ui primary button" onClick={this.deleteUser}>Delete</button>
                     </div>
                 </td>
           </tr>

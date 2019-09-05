@@ -45,7 +45,7 @@ class UserList extends React.Component {
         if (this.state.users )  {
           return (
             <div >
-                <h1>Online Users</h1>
+                <h1 className="title">Online Users</h1>
                 <table className="ui very basic collapsing celled table">
                     <thead>
                         <tr>

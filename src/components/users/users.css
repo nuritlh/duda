@@ -1,3 +1,10 @@
+.title {
+    font-weight: bold;
+    font-size: 32px;
+    color: #282d32;
+}
+
+/* table style start */
 .ui[class*="very basic"].table {
     width: 100%;
 }
@@ -5,7 +12,9 @@
 .ui.header>.image:not(.icon), .ui.header>img {
     width: 10.5em !important;
 }
-
+.ui.basic.table tbody tr {
+    height: 163px !important;
+}
 .ui.basic.table th {
     color:#bfb9b9;
 }
@@ -17,7 +26,9 @@
 .ui.basic.table tbody tr:hover {
     background-color: #f8f9fb !important;
 }
-
+button {
+    background-color: #5e77ff !important;
+}
 button:hover {
     opacity: 0.8 !important;
 }
@@ -27,5 +38,23 @@ button:hover {
 }
 
 .name {
-    font-weight: 600;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #333333;
 }
+@media only screen and (max-width: 767px) {
+
+    .ui.table:not(.unstackable) tr {
+        text-align: center;
+    }
+
+    .ui.basic.table tbody tr {
+        height: inherit !important;
+        text-align: center;
+    }
+    
+    .ui.header>.image:not(.icon), .ui.header>img {
+        width: 2.5em !important;
+    }
+}
+/* table style end */
