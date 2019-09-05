@@ -17,13 +17,13 @@ class UserCard extends React.Component {
         return (
             <div className="user-container">
                 <div>
-                    <img src={this.state.userImg}/>
-                </div>
-                <div>
-                    {this.props.user.city}
+                    <img src={this.state.userImg} alt="user poster"/>
                 </div>
                 <div>
                     {this.props.user.name}
+                </div>
+                <div>
+                    {this.props.user.city}
                 </div>
                 <div>
                     {this.state.active}

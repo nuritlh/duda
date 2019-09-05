@@ -3,6 +3,7 @@ import React from 'react';
 import Spinner from '../Spinner';
 import usersData from '../../data/Users';
 import UserCard from './UserCard';
+import Services from '../../services/index';
 
 import './users.css';
 
@@ -15,8 +16,9 @@ class UserList extends React.Component {
     }
 
     getUsersData = () => {
-        this.setState({users : usersData.users });
+        this.setState({users : usersData.users })
     }
+
     deleteUser = (userId) => {
         var users = this.state.users
         let userIdx = users.indexOf(userId);
@@ -24,22 +26,16 @@ class UserList extends React.Component {
         this.setState({users})
     }
 
-    sortUserList = () => {
+
+    
+    sortUserList = (sortBy) => {
         var users = this.state.users;
-        users.sort( compare );
-
-        function compare ( a, b ) {
-            if ( a.name < b.name ){
-              return -1;
-            }
-            if ( a.name > b.name ){
-              return 1;
-            }
-            return 0;
-          }  
-          this.setState({users})
+        if(sortBy === 'name') users.sort( Services.compareByName );
+        if(sortBy === 'city') users.sort( Services.compareByCity );
+        if(sortBy === 'status') users.sort( Services.compareByStatus );
+        this.setState({users})
+         
     }
-
        
 
     render() {
@@ -49,9 +45,9 @@ class UserList extends React.Component {
             <div >
                 <div className="user-container">
                     <div >USER</div>
-                    <div onClick={this.sortUserList}>NAME</div>
-                    <div onClick={this.sortUserList}>CITY</div>
-                    <div onClick={this.sortUserList}>STATUS</div>
+                    <div onClick={() => this.sortUserList('name')}>NAME</div>
+                    <div onClick={() => this.sortUserList('city')}>CITY</div>
+                    <div onClick={() => this.sortUserList('status')}>STATUS</div>
                     <div></div>
                 </div>
                 {this.state.users.map((user, idx) => {
