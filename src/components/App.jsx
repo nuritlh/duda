@@ -1,6 +1,6 @@
 import React from 'react';
 
-import fakeData from './data/fakeData';
+import UserList from './users/UserList';
 
 class App extends React.Component{
     state = {};
@@ -8,7 +8,7 @@ class App extends React.Component{
     render() {
         return (
             <div className="ui container" style={{marginTop: '10px'}}>
-                {fakeData.fakeData.title}
+                <UserList />
             </div>
         )
     }
